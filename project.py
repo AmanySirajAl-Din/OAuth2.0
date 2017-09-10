@@ -5,6 +5,14 @@ from sqlalchemy import create_engine, asc
 from sqlalchemy.orm import sessionmaker
 from database_setup import Base, Restaurant, MenuItem
 
+#1- NEW imports
+from flask import session as login_session
+# login_session => works as a dictionary,
+# we can store values in it for
+# the longevity of a users's session with our server
+import random, string
+# used to create a pseudo-random string
+# that will identify each session
 
 #Connect to Database and create database session
 engine = create_engine('sqlite:///restaurantmenu.db')
