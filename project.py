@@ -30,7 +30,8 @@ def showLogin():
     # mix of uppercase letters and digits
     login_session['state'] = state
     # store state in login_session object under the name state
-    return "The current session state is %s" % login_session['state']
+    
+    return render_template('login.html')
 
 #JSON APIs to view Restaurant Information
 @app.route('/restaurant/<int:restaurant_id>/menu/JSON')
